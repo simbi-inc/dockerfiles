@@ -15,9 +15,7 @@ RUN \
     && sudo apt-get install --only-upgrade openssl \
     && sudo apt-get install -y \
       libpq5 \
-      openjdk-7-jre \
       postgresql-client-9.5 \
-      redis-server \
       yarn \
     && sudo apt-get clean \
     && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
