@@ -16,6 +16,8 @@ RUN \
     && sudo apt-get install -y \
       libpq5 \
       postgresql-client-9.5 \
+      silversearcher-ag \
+      shellcheck \
       yarn \
     && sudo apt-get clean \
     && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
