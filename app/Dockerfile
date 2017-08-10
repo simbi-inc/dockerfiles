@@ -25,7 +25,7 @@ RUN \
       cron \
       vim \
       logrotate \
-      s3cmd \
+      awscli \
       nodejs \
       yarn \
     && apt-get clean \
