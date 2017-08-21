@@ -22,7 +22,7 @@ RUN \
     && sudo apt-get clean \
     && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV BUNDLER_VERSION "1.15.3"
+ENV BUNDLER_VERSION "1.15.4"
 
 RUN \
   gem install bundler -v "$BUNDLER_VERSION"
