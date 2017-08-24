@@ -17,9 +17,13 @@ RUN \
     && apt-get install -y \
       libpq5 \
       postgresql-client-9.5 \
+      less \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV BUNDLER_VERSION "1.15.4"
 RUN \
   gem install bundler -v "$BUNDLER_VERSION"
+
+ADD ./bashrc /root/.bashrc
+
