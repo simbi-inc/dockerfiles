@@ -9,6 +9,7 @@ RUN \
     | sudo apt-key add - \
     && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
 
+ENV YARN_VERSION=0.27.5
 RUN \
   sudo apt-get install apt-transport-https \
     && sudo apt-get -qq update \
