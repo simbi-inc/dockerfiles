@@ -11,6 +11,8 @@ RUN \
     && apt-get install -y \
       libpq5 \
       postgresql-client-9.5 \
+      silversearcher-ag \
+      shellcheck \
       less \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
