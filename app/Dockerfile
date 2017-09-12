@@ -12,7 +12,7 @@ RUN \
 
 ENV YARN_VERSION=1.0.1
 RUN \
-  curl -sL https://deb.nodesource.com/setup_7.x | bash - \
+  curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && apt-get install --only-upgrade openssl \
     && apt-get install -y \
       build-essential \
