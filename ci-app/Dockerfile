@@ -9,13 +9,17 @@ RUN \
   apt-get -qq update \
     && apt-get install --only-upgrade openssl \
     && apt-get install -y \
+      less \
       libpq5 \
+      locales \
       postgresql-client-9.5 \
       silversearcher-ag \
       shellcheck \
-      less \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN locale-gen C.UTF-8 || true
+ENV LANG=C.UTF-8
 
 RUN \
   PHANTOMJS_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/phantomjs-latest.tar.bz2" \
