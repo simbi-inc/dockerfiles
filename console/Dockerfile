@@ -21,7 +21,7 @@ RUN \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV BUNDLER_VERSION "1.15.4"
+ENV BUNDLER_VERSION "1.16.0"
 RUN \
   gem install bundler -v "$BUNDLER_VERSION"
 

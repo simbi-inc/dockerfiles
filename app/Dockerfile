@@ -10,7 +10,7 @@ RUN \
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
-ENV YARN_VERSION=1.0.1
+ENV YARN_VERSION=1.3.2
 RUN \
   curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && apt-get install --only-upgrade openssl \
@@ -37,7 +37,7 @@ RUN \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV BUNDLER_VERSION=1.15.4
+ENV BUNDLER_VERSION=1.16.0
 ENV BUNDLE_PATH /gems
 RUN gem install bundler -v "$BUNDLER_VERSION"
 
